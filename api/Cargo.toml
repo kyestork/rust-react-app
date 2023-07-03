@@ -3,7 +3,11 @@ name = "api"
 version = "0.1.0"
 edition = "2021"
 
+[workspace]
+members = [".", "models"]
+
 [dependencies]
+models = { path = "models" }
 axum = "0.6.18"
 jwt-authorizer = "0.10.0"
 serde_json = "1.0.99"

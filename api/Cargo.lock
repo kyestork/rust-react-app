@@ -93,6 +93,7 @@ version = "0.1.0"
 dependencies = [
  "axum",
  "jwt-authorizer",
+ "models",
  "sea-orm",
  "serde",
  "serde_json",
@@ -1216,6 +1217,14 @@ dependencies = [
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
  "windows-sys 0.48.0",
+]
+
+[[package]]
+name = "models"
+version = "0.1.0"
+dependencies = [
+ "sea-orm",
+ "serde",
 ]
 
 [[package]]

@@ -1,16 +1,17 @@
-pub mod user;
-
+mod libs;
+use libs::error::AppError;
 use tower_http::cors::{Any, CorsLayer};
 use std::net::SocketAddr;
 use axum::{routing::get, response::Json, Router};
 use serde_json::{Value, json};
+use models::User;
 
 // use user::Model;
 
 #[tokio::main]
 async fn main() {
     let cors = CorsLayer::new().allow_origin(Any);
-
+    
     let app = Router::new()
         .route("/api", get(root))
         .layer(cors);
